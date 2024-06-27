@@ -16,7 +16,7 @@ pip install pandas
 !pip install nilearn
 !pip install pybids
 ```
-Download the 
+
 >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
 Download "Multimodal Brain Tumor Segmentation Challenge 2019: Data" dataset.
 
@@ -26,9 +26,11 @@ To train the model(s) in the paper, run this command:
 
 ```train
 python train.py --input-data <path_to_data> --alpha 10 --beta 20
+model.fit(X_train_scaled, y_train_reshaped, epochs=10, batch_size=60, validation_data=(X_test_scaled, y_test_reshaped))
 ```
 
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+
 
 ## Evaluation
 
@@ -36,10 +38,14 @@ To evaluate my model on ImageNet, run:
 
 ```eval
 python eval.py --model-file mymodel.pth --benchmark imagenet
+predicted_values = model.predict(X_test_scaled)
+y_test = y_test.tolist()
+mse = mean_squared_error(predicted_values, y_test)
+print(mse)
 ```
 
 >📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
-
+Evaluate the model using the validation dataset. Identify the highest performing epoch based on the lowest val_mae. You may also graph the MAE over epochs.
 
 ## Results
 
