@@ -9,9 +9,16 @@ To install requirements:
 
 ```setup
 pip install -r requirements.txt
+pip install opendatasets
+pip install pandas
+!pip install medpy
+!pip install nibabel
+!pip install nilearn
+!pip install pybids
 ```
-
+Download the 
 >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+Download "Multimodal Brain Tumor Segmentation Challenge 2019: Data" dataset.
 
 ## Training
 
