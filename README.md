@@ -57,8 +57,3 @@ Our model achieves the following performance on the validation test set :
 | ------------------ |----------- | --------- |
 | CNN                |    212     |    237.2    |
   
-
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
