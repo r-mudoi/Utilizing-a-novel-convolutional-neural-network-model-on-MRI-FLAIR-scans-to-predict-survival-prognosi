@@ -55,7 +55,7 @@ Our model achieves the following performance on the validation test set :
 
 |          | Top 1 MAE  | Top 5 MAE |
 | ------------------ |----------- | --------- |
-| CNN                |    227     |    248    |
+| CNN                |    212     |    237.2    |
   
 
 
